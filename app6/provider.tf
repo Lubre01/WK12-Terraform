@@ -8,15 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  region  = var.region
+  region  = "us-east-1"
   profile = "default"  
-}
-
-resource "aws_instance" "demo" {
-  ami           = var.ami
-  instance_type = var.instance_type
-  tags = {
-    name = var.name
-  }
-
 }
